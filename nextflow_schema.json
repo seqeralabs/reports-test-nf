@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/seqeralabs/gatk4-germline-snps-indels/master/nextflow_schema.json",
+  "title": "TEMP pipeline parameters",
+  "description": "TEMP pipeline.",
+  "type": "object",
+  "definitions": {
+    "input_output_options": {
+      "title": "Input/Output options",
+      "type": "object",
+      "description": "",
+      "default": "",
+      "properties": {
+        "input_fofn": {
+          "type": "string",
+          "mimetype": "text/tab-separated-values",
+          "pattern": "^\\S+\\.tsv$",
+          "fa_icon": "fas fa-table",
+          "default": "samplesheet.tsv",
+          "description": "TEMP description"
+        }
+      },
+      "required": ["input"],
+      "fa_icon": "fas fa-terminal"
+    }
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/input_output_options"
+    }
+  ]
+}
